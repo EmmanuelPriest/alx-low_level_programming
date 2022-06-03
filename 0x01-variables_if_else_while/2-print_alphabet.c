@@ -3,8 +3,7 @@
 #include <stdio.h>
 
 /**
- * main - printing of alphabets in lower case
- * 
+ * main - printing of alphabets in lower case 
  * Return: return 0
  */
 int main(void)
