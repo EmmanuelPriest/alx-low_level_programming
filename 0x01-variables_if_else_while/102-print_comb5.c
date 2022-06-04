@@ -3,26 +3,26 @@
 #include <time.h>
 
 /**
- * main - print all possible combinations of two two-digit numbers
+ * main - print all possible combinations of two 2digit no.s
  *
  * Return: Always 0
 */
 
 int main(void)
 {
-	int k, l;
+	int p, q;
 
-	for (k = 0; l <= 98; k++)
+	for (p = 0; p <= 98; p++)
 	{
-		for (l = k + 1; l <= 99; l++)
+		for (q = p + 1; q <= 99; q++)
 		{
-			putchar((k / 10) + '0');
-			putchar((k % 10) + '0');
+			putchar((p / 10) + '0');
+			putchar((p % 10) + '0');
 			putchar(' ');
-			putchar((l / 10) + '0');
-			putchar((l % 10) + '0');
+			putchar((q / 10) + '0');
+			putchar((q % 10) + '0');
 
-			if (k == 98 && l == 99)
+			if (p == 98 && q == 99)
 				continue;
 
 			putchar(',');
@@ -32,5 +32,5 @@ int main(void)
 
 	putchar('\n');
 
-return (0);
+	return (0);
 }
