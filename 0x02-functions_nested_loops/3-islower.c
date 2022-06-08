@@ -1,21 +1,25 @@
 #include "main.h"
+#include <ctype.h>
 
 /**
- * main - check the code.
+ * _islower - function that returns true for lower case number
  *
- * Return: Always 0.
+ * @c: char type letter
+ *
+ * Return: return 0 on success and 1 on fail
  */
-int main(void)
-{
-    int r;
 
-    r = _islower('H');
-    _putchar(r + '0');
-    r = _islower('o');
-    _putchar(r + '0');
-    r = _islower(108);
-    _putchar(r + '0');
-    _putchar('\n');
-    return (0);
+int _islower(int c)
+{
+	int i = islower(c);
+
+	if (i > 0)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
 
