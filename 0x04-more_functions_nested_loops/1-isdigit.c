@@ -11,7 +11,9 @@
 
 int _isdigit(int c)
 {
-	if (c > 0)
+	int i = isdigit(c);
+
+	if (i > 0)
 	{
 		return (1);
 	}
