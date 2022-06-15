@@ -13,8 +13,8 @@ char *string_toupper(char *p)
 
 	while (*(p + m))
 	{
-		if (*(p + m) >= "97" && *(p + m) <= "122")
-			*(p + m) -= "97" - "65";
+		if (*(p + m) >= 'a' && *(p + m) <= 'z')
+			*(p + m) -= 'a' - 'A';
 		m++;
 	}
 	return (p);
