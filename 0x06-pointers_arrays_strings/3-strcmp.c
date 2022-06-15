@@ -12,15 +12,8 @@ int _strcmp(char *s1, char *s2)
 	int difference = (*(s1 + m) - *(s2 + m));
 
 	m = 0;
-	for (m = 0; m < *(s1 + m); m++)
-	{
-	}
-	for (m = 0; m < *(s2 + m); m++)
-	{
-	}
-	for (m = 0; m < (*(s1 + m) == *(s2 + m));)
-	{
-	}
+	while (*(s1 + m) && *(s2 + m) && (*(s1 + m) == *(s2 + m)))
+		m++;
+
 	return (difference);
 }
-
