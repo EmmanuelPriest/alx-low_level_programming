@@ -9,11 +9,10 @@
 int _strcmp(char *s1, char *s2)
 {
 	int m;
-	int difference = (*(s1 + m) - *(s2 + m));
 
 	m = 0;
 	while (*(s1 + m) && *(s2 + m) && (*(s1 + m) == *(s2 + m)))
 		m++;
 
-	return (difference);
+	return (*(s1 + m) - *(s2 + m));
 }
