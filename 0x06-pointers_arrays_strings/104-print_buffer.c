@@ -9,39 +9,41 @@
  */
 void print_buffer(char *b, int size)
 {
-	int l = 0, m, n;
+	int o, j, i;
+
+	o = 0;
 
 	if (size <= 0)
 	{
 		printf("\n");
 		return;
 	}
-	while (l < size)
+	while (o < size)
 	{
-		m = size - l < 10 ? size - l : 10;
-		printf("%08x: ", l);
-		for (n = 0; n < 10; n++)
+		j = size - o < 10 ? size - o : 10;
+		printf("%08x: ", o);
+		for (i = 0; i < 10; i++)
 		{
-			if (n < m)
-				printf("%02x", *(b + l + n));
+			if (i < j)
+				printf("%02x", *(b + o + i));
 			else
-				printf(" ");
-			if (n % 2)
+				printf("  ");
+			if (i % 2)
 			{
 				printf(" ");
 			}
 		}
-		for (n = 0; n < m; n++)
+		for (i = 0; i < j; i++)
 		{
-			int d = *(b + l + n);
+			int c = *(b + o + i);
 
-			if (d < 32 || d > 132)
+			if (c < 32 || c > 132)
 			{
-				d = '.';
+				c = '.';
 			}
-			printf("%d", d);
+			printf("%c", c);
 		}
 		printf("\n");
-		l += 10;
+		o += 10;
 	}
 }
