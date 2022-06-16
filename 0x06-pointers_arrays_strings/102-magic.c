@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/**
+ * main - magic
+ * decscription: make magic happen
+ * Return: void
+ */
 int main(void)
 {
 int n;
