@@ -15,19 +15,22 @@ unsigned int _strspn(char *s, char *accept)
 	m = 0;
 	o = 0;
 
-	while (accept[n] != '\0')
+	while (s[m] != '\0')
 	{
-		m = 0;
+		n = 0;
 
-		while (s[m] != '\0')
+		while (accept[n] != '\0')
 		{
-			if (accept[m] == s[n])
+			if (s[m] == accept[n])
 			{
 				o++;
+				break;
 			}
 
 			n++;
 		}
+		if (accept[n] == '\0')
+			break;
 
 		m++;
 	}
