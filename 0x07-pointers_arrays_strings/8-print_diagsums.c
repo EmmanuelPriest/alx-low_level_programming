@@ -31,5 +31,5 @@ void print_diagsums(int *a, int size)
 			sum += a[m];
 		m++;
 	}
-	printf("%d\n" , sum);
+	printf("%d\n", sum);
 }
