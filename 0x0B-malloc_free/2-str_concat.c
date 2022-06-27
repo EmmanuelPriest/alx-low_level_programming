@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 	}
 
-	for (y = 0, z = 0; y < (m + z + 1); y++)
+	for (y = 0, z = 0; y < (m + x + 1); y++)
 	{
 		if (y < m)
 			n[y] = s1[y];
