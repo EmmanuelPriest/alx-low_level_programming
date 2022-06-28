@@ -3,7 +3,8 @@
 #include <stdio.h>
 
  /**
- * argstostr - concatenates all the arguments of your program
+ * *argstostr - concatenates all the arguments of your program
+ * Description: function that concatenate all the arguments of my program
  * @ac: argument count
  * @av: pointer to pointer to an array of strings
  * Rteurn: return a pointer to a new string, or NULL if it fails
@@ -11,40 +12,37 @@
 
 char *argstostr(int ac, char **av)
 {
-	char *n, *retp;
-	int x, m, result;
+	char *n;
+	int x, y, m, result = ac;
 
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
-
-	for (x = 0, result = 0; x < ac; x++)
+	for (x = 0; x < ac; x++)
 	{
-		for (m = 0; *(*(av + x) + m) != '\0'; m++, result++)
-			;
-		result++;
+		for (y = 0; av[x][y]; y++)
+			result++;
 	}
-	result++;
 
-	n = malloc(result * sizeof(char));
+	n = malloc(sizeof(char) * result + 1);
+
 	if (n == NULL)
 	{
 		return (NULL);
 	}
 
-	retp = n;
-	for (x = 0; x < ac; x++)
+	m = 0;
 
+	for (x = 0; x < ac; x++)
 	{
-		for (m = 0; av[x][m] != '\0'; m++)
-		{
-			*n = av[x][m];
-				n++;
-		}
-		*n = '\n';
-		n++;
+		for (y = 0; av[x][y]; y++)
+			n[m++] = av[x][y];
+
+		n[m++] = '\n';
 	}
 
-	return (retp);
+	n[result] = '\0';
+
+	return (n);
 }
