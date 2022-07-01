@@ -1,153 +1,149 @@
 #include "main.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * _atoi_digit - function for converting a character to integer
- * @x: character to be converted
+ * _print - function to move a string one place to the left and print it
+ * @str: the string to be moved
+ * @l: the size of string
  *
- * Return: an integer
+ * Return: nothing
  */
-int _atoi_digit(char x)
+void _print(char *str, int l)
 {
-	unsigned int dev;
+	int n, m;
 
-	if (x <= '9' && x >= '0')
-		dev = x - '0';
-	return (dev);
+	n = m = 0;
+	while (n < l)
+	{
+		if (str[n] != '0')
+			m = 1;
+		if (m || n == l - 1)
+			_putchar(str[n]);
+		n++;
+	}
+
+	_putchar('\n');
+	free(str);
 }
 
 /**
- * _isNumber - function to define if a string is a number
- * @argv: the pointer to string
+ * mul - multiplies a char with a string and place the answer into dest
+ * @n: char to be multiplied
+ * @num: string to be multiplied
+ * @num_index: last non NULL index of num
+ * @dest: destination of multiplication
+ * @dest_index: the highest index to start addition
  *
- * Return: Success (0)
+ * Return: NULL on failure or a pointer to dest
  */
-int _isNumber(char *argv)
+char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
-	int d;
+	int x, y, mul, mulrem, plus, addrem;
 
-	for (d = 0; argv[d]; d++)
-		if (argv[d] < 48 || argv[d] > 57)
-			return (1);
+	mulrem = addrem = 0;
+	for (x = num_index, y = dest_index; x >= 0; x--, y--)
+	{
+		mul = (n - '0') * (num[x] - '0') + mulrem;
+		mulrem = mul / 10;
+		plus = (dest[y] - '0') + (mul % 10) + addrem;
+		addrem = plus / 10;
+		dest[y] = plus % 10 + '0';
+	}
+	for (addrem = addrem + mulrem; y >= 0 && addrem; y--)
+	{
+		plus = (dest[y] - '0') + addrem;
+		addrem = plus / 10;
+		dest[y] = plus % 10 + '0';
+	}
+	if (addrem)
+	{
+		return (NULL);
+	}
+	return (dest);
+}
+
+/**
+ * check_for_digits - checks the arguments to ensure they are digits
+ * @av: the pointer to arguments
+ *
+ * Return: 0 if digits successful, 1 if not
+ */
+int check_for_digits(char **av)
+{
+	int n, m;
+
+	for (n = 1; n < 3; n++)
+	{
+		for (m = 0; av[n][m]; m++)
+		{
+			if (av[n][m] < '0' || av[n][m] > '9')
+				return (1);
+		}
+	}
 	return (0);
 }
 
 /**
- * _calloc - function to allocate array of size *nmemb
- * @nmemb: number of elements
- * @size: number of bytes of elements
- *
- * Return: pointer to the array
- */
-void *_calloc(unsigned int nmemb, unsigned int size)
-{
-	char *run;
-	unsigned int d;
-
-	run = malloc(size * nmemb);
-
-	if (run == NULL)
-		return (NULL);
-
-	for (d = 0; d < (size * nmemb); d++)
-		run[d] = '0';
-
-	return (run);
-}
-
-/**
- * mul_array - function to multiply two arrays
- * @a1: first array
- * @a2: a character
- * @a3: an array for result
- * @len1: length of array a1
- * @lena: length of array a3
- *
- * Return: pointer to an array
- */
-void *mul_array(char *a1, int len1, char a2, char *a3, int lena)
-{
-	int mul = 0, d, n = lena;
-
-	for (d = len1 - 1; d >= 0; d--)
-	{
-		mul = mul + (a1[d] - '0') * (a2 - '0') + (a3[n] - '0');
-		a3[n] = (mul % 10) + '0';
-		mul = mul / 10;
-		n--;
-	}
-
-	while (mul != 0)
-	{
-		mul = mul + a3[n] - '0';
-		a3[n] = (mul % 10) + '0';
-		mul = mul / 10;
-		n--;
-	}
-	return (a3);
-}
-
-/**
- * print_array - function to print all digits of array
- * @nb: number of elements to print
- * @a: array of elements
+ * init - function that initializes a string
+ * @str: the string to be initialized
+ * @l: the length of string
  *
  * Return: nothing
  */
-void print_array(char *a, int nb)
+void init(char *str, int l)
 {
-	int d = 0;
+	int n;
 
-	while (a[d] == '0' && (d + 1) < nb)
-	{
-		d++;
-	}
-	for (; d < nb; d++)
-	{
-		_putchar(a[d]);
-	}
-	_putchar('\n');
+	for (n = 0; n < l; n++)
+		str[n] = '0';
+	str[n] = '\0';
 }
 
 /**
- * main - function to print the multiplication of two numbers
- * @argc: length arrays
- * @argv: an array
+ * main - function that multiplies two numbers
+ * @argc: number of arguments
+ * @argv: argument vector
  *
- * Return: 0
+ * Return: 0 or exit status of 98 on failure
  */
 int main(int argc, char *argv[])
 {
-	int n, m, length1, length2, length3;
-	char E[6] = {'E', 'r', 'r', 'o', 'r', '\n'};
-	char *tab;
+	int n, m, x, y, z;
+	char *b;
+	char *c;
+	char d[] = "Error\n";
 
-	if (argc != 3 || _isNumber(argv[1] == 1 || _isNumber(argv[2] == 1
+	if (argc != 3 || check_for_digits(argv))
 	{
-		for (n = 0; n < 6; n++)
-		{
-			_putchar(E[n]);
-		}
+		for (y = 0; d[y]; y++)
+			_putchar(d[y]);
 		exit(98);
 	}
-	for (length1 = 0; argv[1][length1]; length1++)
-	;
-	for (length2 = 0; argv[2][length2]; length2)
-	;
-	length3 = length1 + length2;
-	tab = _calloc(length3, sizeof(int));
-	if (tab == NULL)
+	for (n = 0; argv[1][n]; n++)
+		;
+	for (m = 0; argv[2][m]; m++)
+		;
+	x = n + m + 1;
+	b = malloc(x * sizeof(char));
+	if (b == NULL)
 	{
-		free(tab);
-		return (0);
+		for (y = 0; d[y]; y++)
+			_putchar(d[y]);
+		exit(98);
 	}
-	for (n = length2 - 1, m = 0; n >= 0; n--)
+	init(b, x - 1);
+	for (y = m - 1, z = 0; y >= 0; y--, z++)
 	{
-		tab = mul_array(argv[1], length1, argv[2][n], tab, (length3 - 1 - m));
-		m++;
+		c = mul(argv[2][y], argv[1], n - 1, b, (x - 2) - z);
+		if (c == NULL)
+		{
+			for (y = 0; d[y]; y++)
+				_putchar(d[y]);
+			free(b);
+			exit(98);
+		}
 	}
-	print_array(tab, length3);
-	free(tab);
-	exit(EXIT_SUCCESS);
+	_print(b, x - 1);
 	return (0);
 }
