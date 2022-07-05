@@ -1,15 +1,15 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
-char *argstostr(int ac, char **av);
 
- /**
- * *argstostr - function that concatenates all the arguments of your program
- * Description: To concatenate all the arguments of your program
- * @ac: argument count
- * @av: pointer to pointer to an array of strings
- * Rteurn: return a pointer to a new string, or NULL if it fails
- */
+/**
+* *argstostr - function that concatenates all the arguments of your program
+* @ac: argument count
+* @av: pointer to pointer to an array of strings
+*
+* Description: To concatenate all the arguments of your program
+* Return: return a pointer to a new string, or NULL if it fails
+*/
 
 char *argstostr(int ac, char **av)
 {
