@@ -1,5 +1,4 @@
 #include "3-calc.h"
-#include "function_pointers.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -25,15 +24,14 @@ int (*get_op_func(char *s))(int, int)
 	int i = 0;
     /* Trying to match operator to function */
 
-	while (ops[i].op)
+	while (i < 5)
 	{
-		if (ops[i].op[0] == *s && s[1] == '\0')
+		if (*s == *ops[i].op)
 		{
-			return (ops[i].f);
+			return (*(ops[i]).f);
 		}
 		i++;
 	}
 	/* not good operator, print error */
-	printf("Ërror\n");
-	exit(99);
+	return (NULL);
 }

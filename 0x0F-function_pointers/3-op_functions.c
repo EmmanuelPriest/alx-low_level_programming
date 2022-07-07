@@ -1,6 +1,7 @@
 #include "function_pointers.h"
 #include "3-calc.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
 * op_add - function to add two integers
@@ -58,7 +59,10 @@ int op_div(int a, int b)
 {
 	int division = (a / b);
 	{
-		return (division);
+		if (b != 0)
+			return (division);
+		printf("Error\n");
+		exit(100);
 	}
 }
 
@@ -74,6 +78,9 @@ int op_mod(int a, int b)
 {
 	int remainder = (a % b);
 	{
-		return (remainder);
+		if (b != 0)
+			return (remainder);
+		printf("Error\n");
+		exit(100);
 	}
 }
