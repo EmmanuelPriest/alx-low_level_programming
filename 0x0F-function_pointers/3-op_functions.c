@@ -14,7 +14,7 @@ int op_add(int a, int b)
 {
 	int sum = (a + b);
 	{
-		return (sum);
+		return (a + b);
 	}
 }
 
@@ -29,7 +29,7 @@ int op_sub(int a, int b)
 {
 	int difference = (a - b);
 	{
-		return (difference);
+		return (a - b);
 	}
 }
 
@@ -44,7 +44,7 @@ int op_mul(int a, int b)
 {
 	int product = (a * b);
 	{
-		return (product);
+		return (a * b);
 	}
 }
 
@@ -60,7 +60,7 @@ int op_div(int a, int b)
 	int division = (a / b);
 	{
 		if (b != 0)
-			return (division);
+			return (a / b);
 		printf("Error\n");
 		exit(100);
 	}
@@ -79,7 +79,7 @@ int op_mod(int a, int b)
 	int remainder = (a % b);
 	{
 		if (b != 0)
-			return (remainder);
+			return (a % b);
 		printf("Error\n");
 		exit(100);
 	}
