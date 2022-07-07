@@ -12,7 +12,7 @@
 */
 int op_add(int a, int b)
 {
-	int sum = (a + b);
+	/* int sum = (a + b); */
 	{
 		return (a + b);
 	}
@@ -27,7 +27,7 @@ int op_add(int a, int b)
 */
 int op_sub(int a, int b)
 {
-	int difference = (a - b);
+	/* int difference = (a - b); */
 	{
 		return (a - b);
 	}
@@ -42,7 +42,7 @@ int op_sub(int a, int b)
 */
 int op_mul(int a, int b)
 {
-	int product = (a * b);
+	/* int product = (a * b); */
 	{
 		return (a * b);
 	}
@@ -57,7 +57,7 @@ int op_mul(int a, int b)
 */
 int op_div(int a, int b)
 {
-	int division = (a / b);
+	/* int division = (a / b); */
 	{
 		if (b != 0)
 			return (a / b);
@@ -76,7 +76,7 @@ int op_div(int a, int b)
  */
 int op_mod(int a, int b)
 {
-	int remainder = (a % b);
+	/* int remainder = (a % b); */
 	{
 		if (b != 0)
 			return (a % b);
