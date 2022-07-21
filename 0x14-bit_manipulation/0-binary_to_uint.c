@@ -28,7 +28,8 @@ unsigned int binary_to_uint(const char *b)
 	while (n >= 0)
 	{
 		bin = bin + ((b[n] - '0') * (m));
-		n--, m = m * 2;
+		n--;
+		m = m * 2;
 		return (bin);
 	}
 }
