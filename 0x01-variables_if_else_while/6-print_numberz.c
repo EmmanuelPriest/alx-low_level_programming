@@ -1,20 +1,21 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - print all single digit numbers of base ten starting from zero
- *
- * Return: return 0
- */
+* main - function to print all single numbers of base 10 from 0
+*
+* Return: Always 0(Success)
+*/
 int main(void)
 {
-	int c;
+	int n;
 
-	for (c = 0; c < 10; c++)
+	n = 48;
+	while (n <= 57)
 	{
-		putchar(c + '0');
+		putchar(n);
+		n++;
 	}
 	putchar('\n');
+
 	return (0);
 }
