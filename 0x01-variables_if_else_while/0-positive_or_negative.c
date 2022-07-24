@@ -3,25 +3,25 @@
 /* more headers goes there */
 #include <stdio.h>
 
+/* betty style doc for function main goes there */
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-
+* main - function to print positive or negative number stored in n
+*
+* Return: Always 0(Success)
+*/
 int main(void)
 {
-	int n, lastdigit;
+	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	/* your code goes there */
-	lastdigit = n % 10;
-	if (lastdigit > 5)
+
+	if (n >= 0)
 	{
 		printf("%d is positive\n", n);
 	}
-	else if (lastdigit == 0)
+	else if (n == 0)
 	{
 		printf("%d is zero\n", n);
 	}
@@ -29,5 +29,6 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-return (0);
+
+	return (0);
 }
