@@ -1,25 +1,24 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - print all the numbers of base sixteen in lowercase
- *
- * Return: return 0
- */
+* main - function that prints all numbers of base 16 from 0
+*
+* Return: Always 0(Success)
+*/
 int main(void)
 {
-	int i;
-	char c;
+	int n;
 
-	for (i = 0; i < 10; i++)
+	for (n = '0'; n <= '9'; n++)
 	{
-		putchar(i + '0');
+		putchar(n);
 	}
-	for (c = 'a'; c <= 'f'; c++)
+
+	for (n = 'a'; n <= 'f'; n++)
 	{
-		putchar(c);
+		putchar(n);
 	}
 	putchar('\n');
-return (0);
+
+	return (0);
 }
