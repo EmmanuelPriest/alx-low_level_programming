@@ -1,24 +1,24 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
- * main - print the alphabet in lowercase, and then in uppercase
- *
- * Return: return 0
- */
+* main - function that prints the alphabet in lowercase and then in uppercase
+*
+* Return: always 0(Success)
+*/
 int main(void)
 {
-	char c, y;
+	int n;
 
-	for (c = 'a'; c <= 'z'; c++)
+	for (n = 'a'; n <= 'z'; n++)
 	{
-		putchar(c);
+		putchar(n);
 	}
-	for (y = 'A'; y <= 'Z'; y++)
+
+	for (n = 'A'; n <= 'Z'; n++)
 	{
-		putchar(y);
+		putchar(n);
 	}
 	putchar('\n');
-return (0);
+
+	return (0);
 }
