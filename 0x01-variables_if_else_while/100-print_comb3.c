@@ -1,35 +1,31 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
 /**
- * main - printing of all possible different combinations of two digits
- *
- * Return: Always 0 (Success)
- */
-
+* main - function that prints all possible different combination of two digits
+*
+* Return: Always 0(Success)
+*/
 int main(void)
 {
-	int i, n;
+	int n, m;
 
-	for (i = '0'; i < '9'; i++)
+	for (n = 48; n <= 57; n++)
 	{
-		for (n = i + 1; n <= '9'; n++)
+		for (m = 49; n <= 57; m++)
 		{
-			if (n != i)
+			if (m > n)
 			{
-				putchar(i);
 				putchar(n);
-
-				if (i == '8' && n == '9')
-					continue;
-
-				putchar(',');
-				putchar(' ');
+				putchar(m);
+				if (n < 56 || m < 57)
+				{
+					putchar(44);
+					putchar(32);
+				}
 			}
 		}
 	}
 	putchar('\n');
 
-return (0);
+	return (0);
 }
