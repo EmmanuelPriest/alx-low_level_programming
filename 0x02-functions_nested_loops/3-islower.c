@@ -2,18 +2,17 @@
 #include <ctype.h>
 
 /**
- * _islower - function that returns true for lower case number
- *
- * @c: char type letter
- *
- * Return: return 0 on success and 1 on fail
- */
-
+* _islower - function that checcks for lowercase character
+*
+* @c: char to be checked
+*
+* Return: return 1 on success and 0 on fail
+*/
 int _islower(int c)
 {
-	int i = islower(c);
+	int n = 'c';
 
-	if (i > 0)
+	if (islower(n))
 	{
 		return (1);
 	}
@@ -22,4 +21,3 @@ int _islower(int c)
 		return (0);
 	}
 }
-
