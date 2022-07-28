@@ -11,7 +11,9 @@
 */
 int _isalpha(int c)
 {
-	if (c >= 'A' && c <= 'Z' || c >= 'a' && c <= 'z')
+	if ((isalpha(c) >= 'A' && isalpha(c) <= 'Z') ||
+			
+			(isalpha(c) >= 'a' && isalpha(c) <= 'z'))
 	{
 		return (1);
 	}
