@@ -2,17 +2,17 @@
 #include <ctype.h>
 
 /**
- * _isalpha - function that checks for alphabetic character
- *
- * @c: char type letter
- *
- * Return: return 0 on success and 1 on  fail
- */
+* _isalpha - function that checks for alphabetic character
+*
+* @c: char to be checked
+*
+* Return: return 1 if c is a letter lowercase or uppercase
+* or 0 if otherwise
+*/
 int _isalpha(int c)
 {
-	int i = isalpha(c);
-
-	if (i > 0)
+	if (isalpha(c) >= 'A' && isalpha(c) <= 'Z' ||
+			isalpha(c) >= 'a' && isalpha(c) <= 'z')
 	{
 		return (1);
 	}
