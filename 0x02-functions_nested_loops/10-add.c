@@ -1,15 +1,17 @@
 #include "main.h"
 
 /**
- * add - adds two integers and returns the result
- *
- * @a: the returning value
- * @b: returning value
- *
- * Return: return int
- */
-
-int add(int a, int b)
+* add - function that adds two integers
+* @n: integer to be added
+* @m: integer to be added
+*
+* Return: result of the addition
+*/
+int add(int n, int m)
 {
-	return (a + b);
+	int result;
+
+	result = (n + m);
+
+	return (result);
 }
