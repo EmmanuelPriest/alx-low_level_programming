@@ -1,16 +1,18 @@
 #include "main.h"
 
 /**
- * mul - function that multiplies two integers
- *
- * @b: an interger interger
- * @a: an interger type
- * Return: return 0 on success and 1 on fail
- */
+* mul - function that multiplies two integers
+* @b: an interger variable to be multiplied
+* @a: an interger variable to be multiplied
+*
+* Return: return 0 on success and 1 on fail
+*/
 
 int mul(int a, int b)
 {
-	int i = a * b;
+	int product = a * b;
 
-	return (i);
+	_putchar(product);
+
+	return (0);
 }
