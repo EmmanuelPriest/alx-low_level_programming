@@ -2,16 +2,15 @@
 #include <ctype.h>
 
 /**
- * _isupper - function that checks for alphabetic character
- *
- * @c: return char type
- *
- * Return: return 0 on success and 1 on fail
- */
+* _isupper - function that checks for uppercase character
+* @c: character to be tested
+*
+* Return: return 1 on success and 0 on fail
+*/
 
 int _isupper(int c)
 {
-	if (c >= 65 && c <= 90)
+	if (c >= 'A' && c <= 'Z')
 	{
 		return (1);
 	}
