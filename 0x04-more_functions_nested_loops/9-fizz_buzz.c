@@ -30,11 +30,9 @@ int main(void)
 		}
 
 		if (n != m)
-		{
-			_putchar(32);
-		}
+			putchar(32);
 	}
-	_putchar('\n');
+	putchar('\n');
 
 	return (0);
 }
