@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * print_most_numbers - a function that prints number from 0 - 9 but not 2 -4
- *
- */
+* print_most_numbers - function that prints numbers from 0 - 9 but not 2 & 4
+*
+* Return: nothing
+*/
 
 void print_most_numbers(void)
 {
@@ -13,6 +14,7 @@ void print_most_numbers(void)
 	{
 		if (n == 50 || n == 52)
 		{
+			continue;
 		}
 		else
 		{
