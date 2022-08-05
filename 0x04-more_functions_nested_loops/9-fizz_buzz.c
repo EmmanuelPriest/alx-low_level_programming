@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
 * main - function prints the Fizz-Buzz test
@@ -13,22 +14,27 @@ int main(void)
 	{
 		if (n % 3 == 0 && n % 5 == 0)
 		{
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		}
 		else if (n % 3 == 0)
 		{
-			printf("Fizz ");
+			printf("Fizz");
 		}
 		else if (n % 5 == 0)
 		{
-			printf(" Buzz");
+			printf("Buzz");
 		}
 		else
 		{
-			printf("%d ", n);
+			printf("%d", n);
+		}
+
+		if (n != m)
+		{
+			_putchar(32);
 		}
 	}
-	putchar('\n');
+	_putchar('\n');
 
 	return (0);
 }
