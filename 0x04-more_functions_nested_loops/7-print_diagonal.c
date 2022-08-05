@@ -22,11 +22,11 @@ void print_diagonal(int n)
 			{
 				if (y == x)
 				{
-					_putchar(32);
+					_putchar('\\');
 				}
 				else if (y < x)
 				{
-					_putchar(92);
+					_putchar(32);
 				}
 				_putchar('\n');
 			}
