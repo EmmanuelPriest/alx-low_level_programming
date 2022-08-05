@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * print_square - func that prints 10 times the numbers, from 0 to 14
- *
- * @size:  integer return type
- *
- */
+* print_square - function that prints a square using # = 35(ASCII)
+* @size: the size of the square
+*
+* Return: nothing
+*/
 
 void print_square(int size)
 {
-	int i = 0, j;
+	int x, y, z = 35;
 
 	if (size <= 0)
 	{
@@ -17,19 +17,13 @@ void print_square(int size)
 	}
 	else
 	{
-		while (i < size)
+		for (x = 0; x < size; x++)
 		{
-			j = 0;
-
-			while (j < size)
+			for (y = 0; y < size; y++)
 			{
-				_putchar('#');
-
-				j++;
+				_putchar(z);
 			}
 			_putchar('\n');
-
-			i++;
 		}
 	}
 }
