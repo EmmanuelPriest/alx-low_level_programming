@@ -2,15 +2,20 @@
 #include <string.h>
 
 /**
- * puts2 - function that prints every other character of a string
- * @str: str parameter
- */
+* puts2 - function that prints every other character of a string
+* (multiples of 2)
+* @str: char string pointer
+*
+* Return: nothing
+*/
 void puts2(char *str)
 {
-	int len, i;
+	int n;
 
-	len = strlen(str);
-	for (i = 0; i < len; i += 2)
-		_putchar(str[i]);
+	for (n = 0; n < strlen(str); n++)
+	{
+		if (n % 2 == 0)
+			_putchar(str[n]);
+	}
 	_putchar('\n');
 }
