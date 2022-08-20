@@ -2,21 +2,22 @@
 #include <stdio.h>
 
 /**
- * print_array - function that prints n elements of an array of integers
- * @a: int type array pointer
- * @n: int type interger
- * Description: Numbers must be separated by comma, followed by a space
- * Numbers should be displayed in the same order they are stored in the array
- */
-
+* print_array - function that prints n elements of an array of integers
+* @a: int type array pointer
+* @n: int type interger
+*
+* Description: Numbers must be separated by comma, followed by a space
+* Numbers should be displayed in the same order they are stored in the array
+*/
 void print_array(int *a, int n)
 {
-	int m;
+	int m, x;
 
 	m = 0;
-	for (n--; n >= 0; n--, m++)
+	for (x = 0; x < n; x++)
 	{
-		printf("%d", a[m]);
+		m += a[x];
+		printf("%d", a[x]);
 		if (n > 0)
 		{
 			printf(", ");
