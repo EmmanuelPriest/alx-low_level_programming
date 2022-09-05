@@ -1,3 +1,3 @@
 #!/bin/bash
-d52e6c18e0723f5b025a75dea19ef365  gm
-export LD_LIBRARY_PATH=$PWD:$LD_LIBRARY_PATH
+wget -P /tmp/ https://raw.github.com/EmmanuelPriest/alx-low_level_programming/master/0x18-dynamic_libraries/nrandom.so
+export LD_PRELOAD=/tmp/nrandom.so
