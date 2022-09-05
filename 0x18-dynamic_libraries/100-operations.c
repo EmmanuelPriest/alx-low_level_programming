@@ -1,33 +1,11 @@
 #include <stdio.h>
 
-int add(a, b)
-int sub(a, b)
-int mul(a, b)
-int div(a, b)
-#include <stdio.h>
+int add(a, b);
+int sub(a, b);
+int mul(a, b);
+int div(a, b);
+int mod(a, b);
 
-int add(a, b)
-int sub(a, b)
-int mul(a, b)
-int div(a, b)
-
-/**
-* add - function that adds 2 ints
-* @a: int
-* @b: int
-*
-* Return: addition of a and b
-*/
-int add(a, b)
-{
-        return (a + b);
-}
-
-/**
-* sub - function that substracts 2 ints
-* @a: int
-* @b: int
--- INSERT --                                                  7,1           Top
 /**
 * add - function that adds 2 ints
 * @a: int
