@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int add(a, b);
-int sub(a, b);
-int mul(a, b);
-int div(a, b);
-int mod(a, b);
+int add(int a, int b);
+int sub(int a, int b);
+int mul(int a, int b);
+int div(int a, int b);
+int mod(int a, int b);
 
 /**
 * add - function that adds 2 ints
@@ -13,7 +13,7 @@ int mod(a, b);
 *
 * Return: addition of a and b
 */
-int add(a, b)
+int add(int a, int b)
 {
 	return (a + b);
 }
@@ -25,7 +25,7 @@ int add(a, b)
 *
 * Return: substraction of a and b
 */
-int sub(a, b)
+int sub(int a, int b)
 {
 	return (a - b);
 }
@@ -37,7 +37,7 @@ int sub(a, b)
 *
 * Return: multiplication of a and b
 */
-int mul(a, b)
+int mul(int a, int b)
 {
 	return (a * b);
 }
@@ -49,7 +49,7 @@ int mul(a, b)
 *
 * Return: division of a and b
 */
-int div(a, b)
+int div(int a, int b)
 {
 	return (a / b);
 }
@@ -61,7 +61,7 @@ int div(a, b)
 *
 * Return: modulo of a and b
 */
-int mod(a, b)
+int mod(int a, int b)
 {
 	return (a % b);
 }
