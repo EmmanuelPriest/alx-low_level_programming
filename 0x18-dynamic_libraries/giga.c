@@ -1,7 +1,16 @@
 #include <stdio.h>
-
-void main(void)
+#include <stdlib.h>
+int main(void)
 {
-	printf("9 8 10 24 75 - 9");
+	int n, m;
+
+	for (n = -9; n <= 10; n++)
+	{
+		m = rand() % 100;
+	printf("%d", m);
+	}
+
 	printf("Congratulations, you win the Jackpot!");
+
+	return (0);
 }
