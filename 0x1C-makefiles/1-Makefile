@@ -1,6 +1,5 @@
 CC = gcc
-SRC = school.c
-BINS = school
+SRC = school.c main.c
 
-all: school.o school.c
+all: school.c main.c
 	$(CC) main.c school.c -o school
