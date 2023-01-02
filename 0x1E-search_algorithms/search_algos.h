@@ -1,6 +1,6 @@
 #ifndef SEARCH_ALGOS_H
 #define SEARCH_ALGOS_H
-#include <stderr.h>
+#include <stddef.h>
 
 /**
 * struct listint_s - singly linked list
