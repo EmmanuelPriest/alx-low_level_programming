@@ -18,9 +18,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	listint_t *nd, *jumper;
 
 	if (list == NULL || size == 0)
-	{
 		return (NULL);
-	}
 
 	x = 0;
 	y = sqrt(size);
@@ -30,9 +28,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		for (x += y; jumper->index < x; jumper = jumper->next)
 		{
 			if (jumper->index + 1 == size)
-			{
 				break;
-			}
 		}
 		printf("Value checked at index [%ld] = [%d]\n", jumper->index, jumper->n);
 	}
